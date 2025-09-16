@@ -8,20 +8,21 @@
 </head>
 <body bgcolor="#EDE9FE">
     <center><h1>Register</h1></center><br>
-    <table border="0" align="center">
-        <tr><td><label>Firstname: </label><td><tr>
-        <tr><td><input type="text"><br></td></tr>
-        <tr><td><label>Lastname: </label><td><tr>
-        <tr><td><input type="text"><br></td></tr>
-        <tr><td><label>Mobile Number: </label><td><tr>
-        <tr><td><input type="text"><br></td></tr>
-        <tr><td><label>Identification Number: </label><td><tr>
-        <tr><td><input type="text"><br></td></tr>
-        <tr><td><label>E-mail: </label><td><tr>
-        <tr><td><input type="email"><br></td></tr>
-        <tr><td><label>Password: </label><td><tr>
-        <tr><td><input type="password"><br></td></tr>
-        <tr><td><button>Register</button><br></td></tr>
-    </table> 
+    <form name="Register-Form" action="signup.php" method="post">
+    <table border="10" align="center">
+        <tr><td><label>Firstname: </label><tr>
+        <tr><td><input type="text" name="fname" required><br></td></tr>
+        <tr><td><label>Lastname: </label><tr>
+        <tr><td><input type="text" name="lname" required><br></td></tr>
+        <tr><td><label>Mobile Number: </label><tr>
+        <tr><td><input type="text" name="mnumber" required><br></td></tr>
+        <tr><td><label>Identification Number: </label><tr>
+        <tr><td><input type="text" name="idnumber" required><br></td></tr>
+        <tr><td><label>E-mail: </label><tr>
+        <tr><td><input type="email" name="email" required><br></td></tr>
+        <tr><td><label>Password: </label><tr>
+        <tr><td><input type="password" name="pwd" required><br></td></tr>
+        <tr><td align="center"><button style="background-color: rgb(153, 153, 153);">Register</button><br></tr>
+    </table></form>
 </body>
 </html>
