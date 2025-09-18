@@ -18,7 +18,7 @@
         from
             users u
         where
-            email= '$e_mail'
+            email= '$e_mail' or ide_number = '$id_number'
         limit 1
     ";
     $res_check = pg_query($conn,$check_email);
@@ -29,11 +29,11 @@
     else{
         //Create query to INSERT INTO
         $query = "INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password) 
-        values ('$f_name','$l_name','$m_number','$id_number','$e_mail','$enc_pass')";
+        values ('$f_name','$l_name','$m_number','$id_number','$e_mail','$p_wd')";
 
         //Execute query
         $res = pg_query($conn,$query);
-        
+
         //Validate result
         if($res){
             //echo "User has been created successfully!!";
