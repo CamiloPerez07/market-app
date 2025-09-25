@@ -1,6 +1,6 @@
 <?php
     //Get database connection
-    require('../config/database.php')
+    require('../config/database.php');
 
     //Get form-data
     $e_mail = $_POST['email'];
@@ -22,7 +22,7 @@
     $res_check = pg_query($conn,$sql_check_user);
 
     if(pg_num_rows($res_check)>0){
-        echo "User exists, Go to main page!!!"
+        echo "User exists, Go to main page!!!";
     } else {
-        echo "Verify data.."
+        echo "Verify data..";
     }
