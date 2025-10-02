@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="icon" type="image/png" href="src/icons/market_main.png"/>
+    <style>
+        .forma{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body bgcolor="#D2D9D3">
     <center><h1>Login</h1></center>
+    <a href="../index.html" style="color: black;">Home</a> 
     <form name="Login-Form" action="signin.php" method="post">
-    <center><img src="img/user_default.png" width="10%"></center>
+    <div class="forma">
+        <center><img src="img/user_default.png" width="10%"></center>
+    </div>
     <table border="0" align="center">
         <tr><td><label>E-mail: </label><tr>
         <tr><td><input type="email" name="email" required><br></td></tr>
