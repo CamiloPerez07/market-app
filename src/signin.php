@@ -22,7 +22,7 @@
     ";
 
     //Execute query
-    $res_check = pg_query($conn,$sql_check_user);
+    $res_check = pg_query($supa_conn,$sql_check_user);
 
     if(pg_num_rows($res_check)>0){
         echo "<script>alert('Success Login')</script>";
