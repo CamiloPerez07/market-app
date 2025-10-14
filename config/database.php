@@ -16,7 +16,7 @@
     $supa_data_connection = "
         host=$supa_host
         user=$supa_user
-        password=$supa_passwordg
+        password=$supa_password
         dbname=$supa_dbname
         port=$supa_port    
     ";
