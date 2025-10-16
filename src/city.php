@@ -17,19 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($res) {
             echo "<script>
-                alert('✅ Ciudad registrada correctamente');
+                alert('Ciudad registrada correctamente');
                 window.location.href = 'signup.html';
             </script>";
             exit();
         } else {
             echo "<script>
-                alert('❌ Error al registrar la ciudad');
+                alert('Error al registrar la ciudad');
                 window.location.href = 'city.php';
             </script>";
             exit();
         }
-    } else {
-        echo "<script>alert('⚠️ Debe llenar todos los campos');</script>";
     }
 }
 

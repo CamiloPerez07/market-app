@@ -29,8 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </script>";
             exit();
         }
-    } else {
-        echo "<script>alert('⚠️ Debe llenar todos los campos');</script>";
     }
 }
 
