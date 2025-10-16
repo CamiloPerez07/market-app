@@ -18,6 +18,11 @@
             <th>Status</th>
             <th>Options</th>
         </tr>
+        <?php
+            sql_users="
+                //
+            ";
+        ?>
         <tr>
             <td>Paola Salazar</td>
             <td>paolita123@mail.com</td>
