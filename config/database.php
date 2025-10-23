@@ -27,18 +27,18 @@
         dbname=$local_dbname
         port=$local_port    
     ";
-    $supa_conn = pg_connect($supa_data_connection);
+    //$supa_conn = pg_connect($supa_data_connection);
     $local_conn = pg_connect($local_data_connection);
 
     /*if(!$supa_conn){
         echo "Error";
     }else{
         echo "Connection Succesfully to Supabase..";
-    }
+    }*/
 
     if(!$local_conn){
         echo "Error";
     }else{
         echo "<br />Connection Succesfully to my PC..";
-    }*/
+    }
 ?>

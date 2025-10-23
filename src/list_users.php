@@ -19,22 +19,39 @@
             <th>Options</th>
         </tr>
         <?php
-            sql_users="
-                //
+            $sql_users="
+                select
+	                u.firstname || ' ' || u.lastname as fullname,
+	                u.email,
+	                u.ide_number,
+                    u.mobile_number,
+	                case 
+                        when u.status = true then 'Active' else 'Inactive' 
+                    end as status
+	            from 
+                    users u
             ";
+            $result = pg_query($local_conn, $sql_users);
+            if(!$result){
+                die("Error: ". pg_last_error());
+            }
+            while($row = pg_fetch_assoc($result)){
+                echo"
+                    <tr>
+                        <td>" . $row['fullname'] ."</td>
+                        <td>" . $row['email'] ."</td>
+                        <td>" . $row['ide_number'] ."</td>
+                        <td>" . $row['mobile_number'] ."</td>
+                        <td>" . $row['status'] ."</td>
+                        <td>
+                            <a href='#'><img src='icons/search.png' width='20'></a>
+                            <a href='#'><img src='icons/refresh.png' width='20'></a>
+                            <a href='#'><img src='icons/delete.png' width='20'></a>
+                        </td>
+                    </tr>";
+            }
         ?>
-        <tr>
-            <td>Paola Salazar</td>
-            <td>paolita123@mail.com</td>
-            <td>1203533021</td>
-            <td>3205566441</td>
-            <td>Active</td>
-            <td>
-                <a href="#"><img src="icons/search.png" width="20"></a>
-                <a href="#"><img src="icons/refresh.png" width="20"></a>
-                <a href="#"><img src="icons/delete.png" width="20"></a>
-            </td>
-        </tr>
+        
     </table>
 </body>
 </html>
