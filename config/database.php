@@ -34,11 +34,11 @@
         echo "Error";
     }else{
         echo "Connection Succesfully to Supabase..";
-    }*/
+    }
 
     if(!$local_conn){
         echo "Error";
     }else{
         echo "<br />Connection Succesfully to my PC..";
-    }
+    }*/
 ?>
