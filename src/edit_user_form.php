@@ -32,7 +32,7 @@
         <label>User</label>
         <input 
             type="hidden" 
-            name= "fname" 
+            name= "userId" 
             value="<?php echo $user_id?>"
             readonly
             required/> <br><br>

@@ -19,10 +19,10 @@
     $result = pg_query($local_conn, $sql_update_user);
 
     if(!$result){
-        die("Error: ". pg_last_error());
-    };
+        die("Error: ".pg_last_error());
+    }
     else{
         echo "<script>alert('User has been updated!')</script>";
         header('refresh:0;url=list_users.php');
-    };
+    }
 ?>
