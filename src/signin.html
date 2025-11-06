@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="icon" type="image/png" href="src/icons/market_main.png"/>
+    <link rel="stylesheet" href="css/main.css">
+
     <style>
         .forma{
             width: 100px;
@@ -15,8 +17,9 @@
     </style>
 </head>
 <body bgcolor="#D2D9D3">
-    <center><h1>Login</h1></center>
-    <a href="../index.html" style="color: black;">Home</a> 
+    <center><h3>Login</h3></center>
+    <div class="button-container">
+    <a href="../index.html" style="color: black;" class="button">Home</a></div><br><br>
     <form name="Login-Form" action="signin.php" method="post">
     <center><img src="img/user_default.png" width="10%" class="forma"></center>
     <table border="0" align="center">
@@ -24,7 +27,7 @@
         <tr><td><input type="email" name="email" required><br></td></tr>
         <tr><td><label>Password: </label><tr>
         <tr><td><input type="password" name="pwd" required><br></td></tr>
-        <tr><td align="center"><button style="background-color: rgb(153, 153, 153);">Login</button><br></tr>
+        <tr><td align="center"><button style="color: black;" class="button">Login</button><br></tr>
     </table></form>
 </body>
 </html>

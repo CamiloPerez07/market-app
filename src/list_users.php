@@ -1,5 +1,12 @@
 <?php
-    require('../config/database.php')
+    require('../config/database.php');
+    
+    session_start();
+
+    //
+    if(!isset($_SESSION['session_user_id'])){
+        header('refresh:0;url=error403.html');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
