@@ -36,6 +36,10 @@
             value="<?php echo $user_id?>"
             readonly
             required/> <br><br>
+        <label>Photo</label>
+        <input type="file"
+            name="photo user"
+            ><br><br>
         <label>Firstname</label>
         <input type="text" 
             name= "fname" 
