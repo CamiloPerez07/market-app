@@ -9,6 +9,7 @@
     $id_number = $_POST['idnumber'];
     $e_mail = strtolower(trim($_POST['email']));
     $p_wd = trim($_POST['pwd']);
+    $url_photo = "photos/user_default.png";
 
     #$enc_pass = password_hash($p_wd, PASSWORD_DEFAULT);
     $enc_pass = md5($p_wd);
@@ -22,15 +23,15 @@
             email= '$e_mail' or ide_number = '$id_number'
         limit 1
     ";
-    $res_check = pg_query($local_conn,$check_email);
+    $res_check = pg_query($supa_conn,$check_email);
     if(pg_num_rows($res_check)> 0){
         echo "<script>alert('User already exists')</script>";
         header('refresh:0;url=signup.html');
     }
     else{
         //Create query to INSERT INTO
-        $query = "INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password) 
-        values ('$f_name','$l_name','$m_number','$id_number','$e_mail','$enc_pass')";
+        $query = "INSERT INTO users (firstname, lastname, mobile_number, ide_number, email, password, url_photo) 
+        values ('$f_name','$l_name','$m_number','$id_number','$e_mail','$enc_pass','$url_photo')";
 
         //Execute query
         $res = pg_query($local_conn,$query);
