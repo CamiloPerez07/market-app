@@ -21,7 +21,7 @@
     <table border="1" class="table table-hover">
         <tr class="table-dark">
             <th><center>Photo</center></th>
-            <th>Fullname</th>
+            <th>Fullname</th> 
             <th>E-mail</th>
             <th>ID number</th>
             <th>Phone number</th>
@@ -50,7 +50,7 @@
             while($row = pg_fetch_assoc($result)){
                 echo"
                     <tr>
-                        <td align='center'><img src=" .$row['url_photo'] . " width ='30'></td>
+                        <td align='center'><img src=" . $row['url_photo'] . " width ='30'></td>
                         <td>" . $row['fullname'] ."</td>
                         <td>" . $row['email'] ."</td>
                         <td>" . $row['ide_number'] ."</td>

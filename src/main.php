@@ -21,6 +21,7 @@
     <center class="head">
         <h1>Welcome to Market-App</h1>
         <br><b>User: </b><?php echo $_SESSION['session_user_fullname']?> <br><br>
+        <?php echo "<img src='" .$_SESSION['session_user_url_photo']. "' width='100'/>"?> <br><br>
     || <a href="logout.php">Logout</a> ||
     <a href="list_users.php">List Users</a> || </center>
 </body>
